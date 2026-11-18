@@ -2,9 +2,9 @@
 title: Summary
 ---
 
-# Earth Vault — Splitter CEB Press
+# Splitter CEB Press
 
-![Render of the gatehouse design](images/hero.jpg)
+![What we're building with it — a vaulted earth gatehouse](images/hero.jpg)
 
 **Status:** Design complete — pre-build
 
@@ -17,17 +17,19 @@ title: Summary
 - [Build It Yourself](build-it.md)
 
 **Brief Summary:**
-A used 25-ton log splitter becomes a hydraulic brick press (the beam is the frame,
-the cylinder is the ram — the only fabricated part is a bolt-on mold). Site soil —
-nothing else — becomes a two-room vaulted gatehouse: a 14-ft-span form-free vault,
-an open arched mouth, a rear cell with a door, and stepped earthen counterforts
-instead of a concrete footing. No added water, no cement, no rebar, no formwork.
-Every step is also a rehearsal for building the same way on Mars.
+A used 25-ton log splitter is already a powered hydraulic press — beam, cylinder,
+engine, pump, valve, tank. Add one fabricated part (a bolt-on mold box) and it
+presses compressed-earth bricks at ~520 psi from raw site soil with zero added
+water. Unbolt the mold and it's a log splitter again. ~1–2 bricks a minute, ~$500
+all-in. The press doubles as its own QC rig — the hydraulic gauge reads each
+brick's crush strength.
+
+First application (pictured): a two-room vaulted gatehouse, ~3,050 bricks +
+~55 yd³ of shaped earth, built from the ground it stands on.
 
 ## References:
 
+- Open Source Ecology CEB press (the movement benchmark — ours is ~1/100th the cost)
+- AECT / Vermeer commercial CEB machines ($59–149k)
 - Nubian vault tradition (form-free leaning courses) — Association La Voûte Nubienne
-- "Direct Formation of Structural Components Using a Martian Soil Simulant" — Nature Scientific Reports (dry-compressed regolith blocks)
-- "Microbially induced calcite precipitation can consolidate martian and lunar regolith simulants" — PLOS One (MICP binder fallback)
-- NASA ARMADAS (Science Robotics 2024), VaultBot — autonomous discrete-block assembly
-- Open Source Ecology CEB press; Cal-Earth superadobe (nearest earth-vessel rival)
+- "Direct Formation of Structural Components Using a Martian Soil Simulant" — Nature Scientific Reports

@@ -5,9 +5,10 @@ title: Build it
 # Build it yourself
 
 The kit: one used ~25-ton log splitter, ~80 lb of plate welded into a mold box, and
-dirt. If your soil passes the gates below, you get bricks. The vault stacks
-form-free — each course leans on the party wall — and the earthwork is a winch and
-a slip pan.
+dirt. If your soil passes the gates in Step 3, you get bricks — the press is the
+project; the gatehouse at the end is just the biggest thing we've spec'd to make
+with it. The vault stacks form-free — each course leans on the party wall — and
+the earthwork is a winch and a slip pan.
 
 ### Tools Required
 

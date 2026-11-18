@@ -1,6 +1,6 @@
-# Earth Vault — Splitter CEB Press
+# Splitter CEB Press
 
-Turn a used log splitter into a brick press and build a storm-sheltered, all-earth vaulted gatehouse out of site soil — no added water, no purchased building materials.
+Turn a used log splitter into a zero-water compressed-earth-brick press — one bolt-on mold box, nothing else. ~$500, ~520 psi, and it unbolts back to a log splitter.
 
 **See the full project: https://mars-doom.github.io/ceb-press/**
 

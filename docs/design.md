@@ -4,79 +4,76 @@ title: Design
 
 Design
 
-Two machines, one weldment, and a lot of dirt. A stock log splitter is already a
-powered horizontal press — add a mold box that clamps onto the beam end and it makes
-compressed-earth bricks. Stack those bricks dry into a vault that leans against its
-own back wall (the Nubian trick — no formwork), and park shaped soil against it for
-mass and weather. What comes out is a storm-sheltered two-cell gatehouse built from
-the ground it stands on.
+Don't build a press — buy one that's already engineered. A towable log splitter is
+a powered horizontal hydraulic press: I-beam frame, 25-ton cylinder, engine-driven
+two-stage pump, valve, reservoir, hoses — factory-matched for ~$350 used. The only
+part we fabricate is the mold box, and it clamps on so the machine unbolts back to
+a log splitter.
 
 ```mermaid
 flowchart LR
-    A[25T log splitter] --- B[bolt-on mold box]
-    B --- C[~3,050 CEBs · 520 psi]
-    D[site soil] --- C
-    C --- E[dry-stack ribs + lean vault]
-    F[winch + slip scraper] --- G[counterforts + banks + cap]
-    E --- H[gatehouse]
-    G --- H
+    A[used 25T log splitter] --- B[end-shoe cradle + mold box]
+    B --- C[CEBs · ~520 psi face]
+    D[native site soil · 0 water] --- C
+    C --- E[bricks for vaults, walls, pavers]
 ```
 
-**Interactive model:** [open the 3-D viewer](../viewer/) — drag to orbit, buttons for
-exterior / section / interior.
+## The mold — the one built part
 
-## The press
+- **Bore**: 3/8–1/2″ plate, ~⅛″ oversize on the largest product; bolt-in liner sets
+  change product size — one master bore, swap liners
+- **Platen**: ~1″ plate, 1/16″ under bore, stub shaft to the cylinder nose
+- **Dead-stop collar** on the stub — brick height is set mechanically, not by feel
+- **Bottom-hinge eject door** — drops flat = take-off shelf at bed level
+- **Top fill gate** = the dose door
 
-- Beam = frame, cylinder = ram, engine + two-stage pump + valve + reservoir = power
-  pack. Zero alteration — the mold mounts on an end-shoe cradle and unbolts to stock
-- The mold is the only fabricated part: 3/8–1/2″ plate bore, ~1″ platen, dead-stop
-  collar (brick height is set mechanically), bottom-hinge eject door, top fill gate
-- Force budget: 25 tons over an 8×12″ face ≈ 520 psi — mid-band for CEB compaction.
-  Standard bricks for vault curves; jumbos for walls. An on-hand rebuildable
-  cylinder (5.5–6″ bore pending measure) is the 35–42T upgrade path
-- QC gates are free: the gauge reads crush pressure at failure — the press is its
-  own test rig. Thickness ±1/16″, drop test every 50th, soak test per batch
+## Mount + plumbing — zero alteration
 
-## The structure
+- **End-shoe cradle** wraps the beam *end*: 1/2″ end plate (abutment) + 3/8″ top
+  strap + cheek plates through-bolted below the bottom flange. Mold force bears on
+  the beam end face — pure bearing, no drilling or welding to the splitter.
+  Clamps carry positioning only, never the 50,000 lbf reaction
+- Stock cylinder stays plumbed to its own pump. One in-line gauge tee (~$20) —
+  the gauge doubles as the crush-test readout: **the press is its own QC rig**
 
-- **14 ft clear-span vault**, ~8″ shell, 12 courses leaning ~15° onto the party wall —
-  every course is supported by the wall and the previous course, which is why a
-  single cheap gantry can place them (research systems need cooperative support
-  robots; this geometry doesn't)
-- **Two cells**: front hall 14×8 ft, rear cell 14×5 ft behind the party-wall door,
-  vented by a stack, closed by a stepped rear gable
-- **Battered rib walls** (~6″ wythes + compacted soil core) on plinth keys below grade
-- **Six stepped counterforts** (3/side) carry the thrust as low, wide, positioned
-  mass — better abutments than the berm they replaced, at ~40% of the earthwork
-- **Envelope**: ~44″ haunch banks + ~10″ armored cap + paver armor + storm threshold —
-  weather/dust duty, not primary restraint
-- **Acoustics**: echea cavities + woofer discs embedded in the ribs — the gatehouse
-  is a passive bass instrument for the venue it fronts
+## Force budget — size bricks to YOUR splitter
 
-## Numbers (screening, not certification)
+face psi = tons × 2,000 ÷ brick face in² · target 500–1,500 psi
 
-| Metric | Value |
-|---|---|
-| Brick-equivalents | ~3,050 |
-| Earth moved | ~55 yd³ |
-| Solo schedule | ~9–11 days all-in (3–4 press, 2.5 stack, 5–6 scrape) |
-| Composite kern bound | ~8.6–11g |
-| Static sheltered FoS | ~3.3 |
-| Incoherent loose-fill floor | ~0.76g — plinth keys + compacted lifts mandatory |
-| Machine + site materials | ~$700 core / ~$1,100 incl. teleop + stove |
+| Splitter | Brick face range | Example products |
+|---|---|---|
+| 20T | 27–80 in² | 8×10 dome · 6×12 wall · 8×8 paver |
+| **25T** | **33–100 in²** | **8×10 dome · 6×12 wall · 10×10 paver · 8×12 jumbo (~520 psi)** |
+| 35T | 47–140 in² | 10×14 dome · 8×10 wall |
 
-!!! warning "Honest limits"
-    These are in-house screening numbers (kern/membrane/residual checks in
-    `files/venue_battle.py`), not code-certified ratings. Occupancy use needs
-    licensed structural/geotech/life-safety review.
+Undersize the brick — never the force. `files/brick_calc.py press` prints the table
+for any tonnage.
 
-## Mars path
+## Cycle + QC (all gates free)
 
-The method was chosen for transfer: dry-compacted regolith blocks are a published
-route; gravity helps (0.38g scales thrust and confinement together); the shell is a
-radiation shield around a pressurized bladder, never the pressure vessel; shielding
-claims require >1 m cover. Teleop here proves the task is remote-buildable — Mars
-itself needs supervised autonomy (4–24 min light delay).
+dose (marked scoop = volumetric) → close gate → extend to dead-stop → dwell ~3 s →
+retract → shoe out → push-through eject → rack to air-cure. ~1–2 bricks/min manual.
+
+- Thickness ±1/16″ · drop test every 50th · 24-hr soak per batch · crush = gauge
+  pressure at failure → MPa
+- Soil gates decide viability before a single brick: jar test (clay %), squeeze-ball
+  (~4–6% native moisture — mist liters/ton only if under 4%), soak/efflorescence
+  (salinity). A failed soil is a site finding, never a purchase
+
+## Upgrade paths (optional, never gating)
+
+- **Swap cylinder** 5.5–6″ bore → 35–42T on the same pump (on-hand rebuildable cyl
+  pending bore + chrome check); add a channel stiffener under the press zone
+- **Auto-cycle**: wiper motor + cam + limit switches on the valve lever (~$30–80)
+- **Auto-dose**: wiper-motor drawer hopper (~$50–150)
+
+## What it's for — first application
+
+A two-room earth gatehouse: 14-ft form-free lean vault, battered rib walls, six
+stepped counterforts, ~3,050 brick-equivalents, ~55 yd³ of shaped earth, ~9–11 days
+solo. Interactive model: [open the 3-D viewer](../viewer/). Screening (in-house,
+not certified): composite kern ~8.6–11g bound, static FoS ~3.3, loose-fill floor
+~0.76g → plinth keys + compacted lifts mandatory.
 
 ## Parts
 
