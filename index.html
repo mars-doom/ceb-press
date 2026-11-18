@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CEB Project — Status</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #14100c; color: #e8e0d4;
+    font: 17px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 4vh 5vw 10vh; }
+  h1 { font-size: 2.4em; color: #f0e8da; letter-spacing: .02em; }
+  h2 { font-size: 1.5em; color: #e8b96d; margin: 2em 0 .6em; font-weight: 600;
+       border-bottom: 1px solid #3a332b; padding-bottom: .3em; }
+  h3 { color: #e8b96d; font-size: 1.05em; margin: 1.2em 0 .3em; }
+  .sub { color: #a89b87; margin: .4em 0 1em; }
+  .kicker { color: #e8b96d; text-transform: uppercase; letter-spacing: .15em;
+            font-size: .75em; margin-bottom: .8em; }
+  ul { list-style: none; }
+  li { padding: .22em 0 .22em 1.2em; position: relative; }
+  li::before { content: "▸"; position: absolute; left: 0; color: #e8b96d; }
+  li b { color: #f0e8da; }
+  .num { color: #e8b96d; font-weight: 700; }
+  .price { color: #9fd48a; font-weight: 600; }
+  .warn { color: #e0885e; font-weight: 600; }
+  .ok { color: #9fd48a; font-weight: 600; }
+  .todo-s { color: #8ab4f8; font-weight: 600; }
+  .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+           gap: .8em; margin: 1.2em 0; }
+  .card { background: #1d1813; border: 1px solid #3a332b; border-radius: 8px;
+          padding: .9em 1em; }
+  .card .t { font-size: .8em; text-transform: uppercase; letter-spacing: .1em;
+             color: #a89b87; margin-bottom: .3em; }
+  .card .s { font-size: 1.15em; font-weight: 700; }
+  .card p { font-size: .82em; color: #a89b87; margin-top: .4em; }
+  table { border-collapse: collapse; width: 100%; font-size: .9em; margin: .6em 0; }
+  td, th { padding: .35em .7em; border-bottom: 1px solid #3a332b; text-align: left; }
+  th { color: #e8b96d; font-weight: 600; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .flow { display: flex; gap: .45em; flex-wrap: wrap; margin: 1em 0; }
+  .flow span { background: #2a241d; border: 1px solid #4a4136; border-radius: 6px;
+               padding: .35em .7em; font-size: .85em; }
+  .flow i { color: #e8b96d; align-self: center; font-style: normal; }
+  a { color: #8ab4f8; text-decoration: none; border-bottom: 1px dotted #8ab4f8; }
+  a:hover { color: #b8d4ff; }
+  .btn { display: inline-block; background: #2a241d; border: 1px solid #4a4136;
+         border-radius: 8px; padding: .6em 1.2em; margin: .3em .5em .3em 0;
+         border-bottom: 1px solid #4a4136; font-weight: 600; }
+  .btn:hover { background: #35302a; }
+  .note { background: #241d15; border-left: 3px solid #e0885e; padding: .8em 1em;
+          margin: 1em 0; font-size: .9em; color: #d8cdbd; }
+  .done { color: #9fd48a; }
+  footer { margin-top: 4em; color: #6b6154; font-size: .8em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Project Status — November 2026</div>
+  <h1>Log-Splitter CEB Press<br>+ All-Earth Gatehouse</h1>
+  <p class="sub">Salida / Great Sand Dunes, CO &amp; Mars College, Salton Sea — ~$700 machine,
+     ~100% on-site materials, zero added water, zero tensile elements. Mars is the endpoint; the gatehouse is the qualification prototype.</p>
+
+  <div class="flow">
+    <span>Buy splitter</span><i>→</i><span>Weld mold box</span><i>→</i>
+    <span>Soil + crush gates</span><i>→</i><span>Press ~3,050 bricks</span><i>→</i>
+    <span>Stack vault ~2.5 d</span><i>→</i><span>Bank + cap ~5–6 d</span><i>→</i>
+    <span>Gatehouse stands</span>
+  </div>
+
+  <div class="note" style="border-left-color:#8ab4f8">
+    <b>For Mars College:</b> the pitch in one line — a $500 log splitter becomes a brick press,
+    local dirt becomes a storm-sheltered vaulted structure in ~10 days, with zero water and zero
+    purchased building materials — and every step of the method is a rehearsal for building on Mars.
+    What we'd love feedback on: <b>the Salton Sea deployment site, soil suitability, who wants to
+    help press bricks, and whether the desert campus wants a unit of its own.</b>
+    Everything below is the honest current state — designs and numbers done, first purchase not yet made.
+  </div>
+
+  <h2>Where it stands</h2>
+  <div class="board">
+    <div class="card"><div class="t">Design</div><div class="s done">DONE</div>
+      <p>Parametric OpenSCAD model, manifold-clean STLs, enclosure ray-tested. Two cells kept.</p></div>
+    <div class="card"><div class="t">Structural screening</div><div class="s done">DONE*</div>
+      <p>Kern/foothold screening passes. *Preliminary calcs, not engineering certification.</p></div>
+    <div class="card"><div class="t">Procurement</div><div class="s todo-s">IN PROGRESS</div>
+      <p>All parts located on Craigslist — nothing purchased yet.</p></div>
+    <div class="card"><div class="t">Press build</div><div class="s warn">NOT STARTED</div>
+      <p>Next: buy run → weld mold box → gauge + fluids.</p></div>
+    <div class="card"><div class="t">Soil testing</div><div class="s warn">NOT STARTED</div>
+      <p>Jar test, squeeze-ball moisture, crush gate decide site viability.</p></div>
+    <div class="card"><div class="t">Structure build</div><div class="s warn">NOT STARTED</div>
+      <p>~9–11 days all-in solo once pressing starts.</p></div>
+  </div>
+
+  <h2>The machine — ~$500 core</h2>
+  <p>A stock towable <b>25-ton log splitter IS the press</b>: beam = frame, cylinder = ram,
+     engine + two-stage pump + valve + reservoir = the power pack. One fabricated part —
+     the mold box — bolts on with zero alteration (unbolts back to a working log splitter).
+     8×12×4″ jumbo bricks at ~520 psi face pressure; standard bricks for vault bands.</p>
+  <table>
+    <tr><th>Item</th><th>Status</th><th class="n">$</th></tr>
+    <tr><td><a href="https://www.craigslist.org/view/d/fort-garland-log-splitter/jZbFq6x67wNuL8SdXJMzfd" target="_blank">25T log splitter, Ft Garland</a></td><td class="todo-s">listed live</td><td class="n price">350</td></tr>
+    <tr><td>Mold plate 3/8–1/2″ — buy new (pressure-critical)</td><td>Pueblo steel yard</td><td class="n price">60–110</td></tr>
+    <tr><td>In-line gauge 0–5,000 psi</td><td>buy new</td><td class="n price">20</td></tr>
+    <tr><td>Gr-8 eject pin + bolts</td><td>buy new</td><td class="n price">15–25</td></tr>
+    <tr><td>Hydraulic fittings, bulk bag — Florence</td><td class="todo-s">listed live</td><td class="n price">40</td></tr>
+    <tr><td>Oils + fuel</td><td>buy new</td><td class="n price">50–80</td></tr>
+    <tr><td>On-hand cylinder (5–6″ bore pending measure)</td><td>rebuild → 35–42T upgrade ram</td><td class="n price">20–40 seals</td></tr>
+    <tr><th colspan="2">Press all-in</th><th class="n price">~460–635</th></tr>
+  </table>
+
+  <h2>The structure — gatehouse / dromos</h2>
+  <div class="board">
+    <div class="card"><div class="t">Span / form</div><div class="s">14 ft vault</div>
+      <p>Form-free Nubian (lean) vault, ~15° courses onto the party wall. Open arched mouth.</p></div>
+    <div class="card"><div class="t">Cells</div><div class="s">2 rooms</div>
+      <p>Front hall 14×8 ft + rear cell 14×5 ft (~70 sq ft), door in party wall, vent stack, stepped rear gable.</p></div>
+    <div class="card"><div class="t">Mass</div><div class="s">~3,050 bricks</div>
+      <p>Brick-equivalents incl. counterforts, banks armor, plinth keys.</p></div>
+    <div class="card"><div class="t">Earth moved</div><div class="s">~55 yd³</div>
+      <p>6 stepped counterforts + reduced haunch banks + ~10″ armored cap — down from ~130 yd³ berm.</p></div>
+    <div class="card"><div class="t">Schedule</div><div class="s">~9–11 days</div>
+      <p>Solo all-in: ~3–4 d press + ~2.5 d stack + ~5–6 d scrape earthwork.</p></div>
+    <div class="card"><div class="t">Screening bound</div><div class="s">8.6–11g</div>
+      <p>Composite kern band; static FoS ~3.3; incoherent loose-fill floor ~0.76g — keys + compacted lifts mandatory.</p></div>
+  </div>
+  <p>Extras in the design: echea / passive-bass acoustic cavities in the ribs, woofer discs,
+     storm threshold, vent shutters, paver cap armor. Amenities spec drafted: stove flue,
+     timber door leaf, paver floor, bed platform (~$270 purchased).</p>
+
+  <a class="btn" href="viewer/">3-D model — drag to orbit →</a>
+  <a class="btn" href="slideshow.html">Full slideshow deck →</a>
+
+  <h2>Robotics path — scrounged, ~$300 entry</h2>
+  <ul>
+    <li><b>Teleop earthwork</b> — Chicago Electric 3,000 lb winch w/ wireless remote (~$150, found on Craigslist) + slip pan + deadman anchor: the remote <i>is</i> the teleop. Same winch remounts on a monorail as the brick hoist.</li>
+    <li><b>Press auto-cycle</b> — wiper motor + cam + limit switches on the valve lever, ~$30–80 scrounged.</li>
+    <li><b>Brick-placement gantry</b> — Cartesian rail over the wall, ~$1–3k DIY. Our leaned-vault method makes this the <i>simplest published-compatible robot task</i>: every course rests on the party wall, no support robot needed (research systems like VaultBot / NASA ARMADAS need cooperative support arms — ours don't, and cost ~1%).</li>
+    <li><b>Loaders/tractors</b> — demoted to "if a deal lands": Ford 2N $1,000 Avondale, Int'l+loader $2,500 Gardner, JD 1050 $3,500 Pueblo (stale = negotiable).</li>
+  </ul>
+
+  <h2>Mars transfer — verified against literature</h2>
+  <ul>
+    <li><b>Dry-compression is a published route</b> — Martian simulant compacts into blocks with no binder/water (Nature Sci. Reports). Our ~520 psi is below published test pressures → MICP is the binder fallback (3.3–5.65 MPa on simulant, survives 1% perchlorate).</li>
+    <li><b>Gravity</b>: 0.38g scales thrust and confining weight together — Earth is the harder case.</li>
+    <li><b>Shell ≠ habitat</b>: dry-stack shell is a radiation <i>shield</i> around a pressurized bladder — shielding claims need &gt;1 m regolith (dose peaks at 0.4 m).</li>
+    <li><b>Teleop ≠ Mars ops</b>: 4–24 min light delay → supervised autonomy is the real architecture; the Earth winch-demo proves the task is remote-buildable.</li>
+    <li><b>Carbon</b>: Earth envelope can take 4–6% coarse biochar (~8–10 t CO₂e buried/structure) — functional (moisture + acoustic fill), sequestration rides along. Mars substitutes scoria.</li>
+  </ul>
+
+  <div class="note">
+    <b>Honest limits:</b> structural numbers are in-house screening, not code-certified ratings —
+    no Airbnb/occupancy use without licensed structural/geotech/life-safety review and permits.
+    Craigslist listings are unverified until inspected (tonnage, cylinder condition, hose/valve integrity).
+    The winch is a demonstrator-scale earthmover, not a production machine.
+  </div>
+
+  <footer>
+    CEB project · repo: ~/Documents/ceb-press · updated 2026-11-17 ·
+    <a href="viewer/">model</a> · <a href="slideshow.html">deck</a>
+  </footer>
+</div>
+</body>
+</html>

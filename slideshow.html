@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CEB Megaplan — Splitter-Press Brick Plant + All-Earth Dome</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #14100c; color: #e8e0d4;
+    font: 17px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; overflow: hidden; }
+  .slide { display: none; height: 100vh; padding: 5vh 6vw 8vh; flex-direction: column; justify-content: center; }
+  .slide.on { display: flex; }
+  h1 { font-size: 2.6em; letter-spacing: .02em; color: #f0e8da; margin-bottom: .4em; }
+  h2 { font-size: 1.9em; color: #e8b96d; margin-bottom: .6em; font-weight: 600; }
+  .sub { color: #a89b87; font-size: 1.05em; margin-bottom: 1em; }
+  .cols { display: flex; gap: 3em; align-items: flex-start; }
+  .cols > div { flex: 1; min-width: 0; }
+  ul { list-style: none; }
+  li { padding: .28em 0 .28em 1.2em; position: relative; }
+  li::before { content: "▸"; position: absolute; left: 0; color: #e8b96d; }
+  li b { color: #f0e8da; } li small { color: #a89b87; }
+  .num { font-weight: 700; color: #e8b96d; }
+  img.full { max-height: 62vh; max-width: 100%; object-fit: contain; align-self: center;
+    border-radius: 8px; border: 1px solid #3a332b; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2em; }
+  .grid3 img { width: 100%; border-radius: 8px; border: 1px solid #3a332b; }
+  .grid3 figcaption { text-align: center; color: #a89b87; font-size: .85em; margin-top: .4em; }
+  table { border-collapse: collapse; width: 100%; font-size: .92em; }
+  td, th { padding: .3em .7em; border-bottom: 1px solid #3a332b; text-align: left; }
+  th { color: #e8b96d; font-weight: 600; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .price { color: #9fd48a; font-weight: 600; }
+  .warn { color: #e0885e; font-weight: 600; }
+  .ok { color: #9fd48a; font-weight: 600; }
+  .flow { display: flex; gap: .5em; flex-wrap: wrap; margin: 1em 0; }
+  .flow span { background: #2a241d; border: 1px solid #4a4136; border-radius: 6px;
+    padding: .4em .8em; font-size: .9em; }
+  .flow i { color: #e8b96d; align-self: center; font-style: normal; }
+  #hud { position: fixed; bottom: 14px; right: 20px; color: #6b6154; font-size: .8em; }
+  #hint { position: fixed; bottom: 14px; left: 20px; color: #6b6154; font-size: .8em; }
+  .kicker { color: #e8b96d; text-transform: uppercase; letter-spacing: .15em; font-size: .8em; margin-bottom: 1em; }
+  svg.diagram { max-height: 55vh; width: auto; align-self: center; }
+  a { color: #8ab4f8; text-decoration: none; border-bottom: 1px dotted #8ab4f8; }
+  a:hover { color: #b8d4ff; }
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide">
+  <div class="kicker">Megaplan</div>
+  <h1>Powered CEB Plant<br>+ All-Earth Dome</h1>
+  <p class="sub">Salida, CO &amp; Mars College, Salton Sea — ~$700 machine, ~100% on-site materials, zero added water</p>
+  <div class="flow">
+    <span>Buy: splitter</span><i>→</i>
+    <span>Bolt on mold · weld box</span><i>→</i>
+    <span>Press ~2,100 bricks</span><i>→</i>
+    <span>Dig pit (spoil = bricks)</span><i>→</i>
+    <span>Stack dome ~3 days</span><i>→</i>
+    <span>Berm it — done</span>
+  </div>
+  <ul>
+    <li><b>~$655–1,085</b> all-in vs AECT $59–149k</li>
+    <li><b>2–7 MPa class, crush-verified</b> — press IS the test rig; commercial cites 5.6 spec</li>
+    <li><b>Zero water, zero purchased building materials, zero tensile elements</b></li>
+  </ul>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h2>Phase 0 — The Buy Run <span class="sub" style="font-size:0.5em">(all links verified live 11/15 — click any row)</span></h2>
+  <div class="cols"><div>
+  <table>
+    <tr><th>Item</th><th>Where</th><th class="n">$</th></tr>
+    <tr><td><a href="https://www.craigslist.org/view/d/fort-garland-log-splitter/jZbFq6x67wNuL8SdXJMzfd" target="_blank">Log splitter = THE PRESS</a></td><td>Ft Garland</td><td class="n price">350</td></tr>
+    <tr><td>Gauge tee + minor adapters (stock plumbing already closed; <a href="https://www.craigslist.org/view/d/florence-new-hydraulic-fittings-bulk/ua7uRt9CkGgcxxSwVGvaCZ" target="_blank">$40 Florence bag</a> = optional)</td><td>local</td><td class="n price">10–20</td></tr>
+    <tr><td>Mold plate 3/8–1/2″ → <b>Pueblo steel supplier cut drops (buy new)</b> — ribs not needed at 25T</td><td>Pueblo</td><td class="n price">60–110</td></tr>
+    <tr><td>In-line gauge 0–5,000 psi</td><td>buy-new</td><td class="n price">20</td></tr>
+    <tr><td>Gr-8 eject pin + bolts</td><td>buy-new</td><td class="n price">15–25</td></tr>
+    <tr><td>Hydraulic + engine oil + fuel</td><td>buy-new</td><td class="n price">50–80</td></tr>
+    <tr><th colspan="2">Total</th><th class="n price">~460–635</th></tr>
+  </table>
+  </div><div>
+  <ul>
+    <li><b>Route:</b> Salida → Florence → (CO Springs steel) → home; Ft Garland splitter separate</li>
+    <li><b>Force:</b> stock 25T cyl — products sized to it: <b>8×10 dome = 625 psi ✓ · 6×12 wall = 694 ✓ · 10×10 paver = 500 ✓</b> — no cylinder swap, no beam mod</li>
+    <li><b>Message first:</b> does splitter start? cyl bore/rod/closed-length</li>
+    <li><b>Eyes-on checks:</b> beam straight (= the press frame), rod unscored, no pump whine</li>
+    <li><b>Fallbacks:</b> free splitter Littleton · $160 CO Springs · $750 Mesa (all live)</li>
+    <li><b>Rule:</b> scrounge everything EXCEPT seals, pins, fluid, gauge — pressure-critical = new</li>
+  </ul>
+  </div></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <h2>The Machine — The Splitter IS the Press</h2>
+  <div class="cols"><div>
+  <img class="full" src="cad/png/assembly_minimal.png" alt="Splitter as press">
+  </div><div>
+  <ul>
+    <li><b>The insight:</b> a log splitter is already a horizontal hydraulic press — I-beam + cylinder + engine-driven power pack in one unit</li>
+    <li><b>The build:</b> mold bolts horizontally on the beam end; cylinder pushes the platen through the bore. <b>No press frame purchased, none fabricated</b></li>
+    <li><b>Force:</b> system ~3,000 psi × stock ~5″ bore = ~25T → 8×10=625 psi, 6×12=694, 10×10 paver=500 — all in band</li>
+    <li><b>Cost:</b> splitter $350 + mold plate ~$110 + parts → <b>~$460–635 — one machine, one purchase</b></li>
+    <li><b>Bonus:</b> fully reversible — splitter still splits logs</li>
+    <li><b>Tradeoff:</b> brick sized to stock force (8×10 = 625 psi ✓) — no swap, no beam mod; ~18 lb units handle easy</li>
+  </ul>
+  </div></div>
+  <p class="sub" style="text-align:center">
+    <span style="color:#e05a3a">■ <b>$350 log splitter</b>: engine, 2-stage pump, valve, tank, beam (the frame), cyl</span> ·
+    <span style="color:#e8b96d">■ <b>stock cyl</b>: ~5″ bore = ~25T = the force</span> ·
+    <span style="color:#c9ccd4">■ <b>Fabricated ~$150</b>: mold box, platen, eject door, shoe, liners</span>
+  </p>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <h2>The Fabricated Weldment — Exploded</h2>
+  <img class="full" src="cad/png/mold_exploded.png" alt="Mold exploded">
+  <p class="sub" style="text-align:center">All fabricated (~$150 steel): platen (groove underneath) → mold box + stiffeners → brick on shoe → door dropped flat.<br>Stock 25T cyl = production force — products sized to it (8×10=625 · 6×12=694 · 10×10=500 psi).</p>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <h2>Parts — Everything We Weld</h2>
+  <div class="grid3">
+    <figure><img src="cad/png/mold_box.png"><figcaption>Mold box · 14.1×12.1″ master bore · 3/8″ plate + angle</figcaption></figure>
+    <figure><img src="cad/png/platen.png"><figcaption>Platen · 1″ plate + stub + dead-stop collar (+ optional key insert)</figcaption></figure>
+    <figure><img src="cad/png/brick.png"><figcaption>The product · 8×10×3.5″ flat-face, ~18 lb — stacks like real tholos (keyed insert ALL courses)</figcaption></figure>
+    <figure><img src="cad/png/liners.png"><figcaption>Liner set → 6×12 (also 8×10 dome, 10×10 paver)</figcaption></figure>
+    <figure><img src="cad/png/eject_door.png"><figcaption>Eject door · bottom-hinged → drops = take-off shelf · ¾″ gr-8 pin</figcaption></figure>
+    <figure><img src="cad/png/bottom_shoe.png"><figcaption>Bottom shoe · slides out for drop-eject (+ optional keyway bar)</figcaption></figure>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <h2>Build — Week 2 Checklist</h2>
+  <div class="cols"><div><ul>
+    <li><b>1.</b> Splitter service: fluids, tire, cold-start + cycle test — cylinder stays stock</li>
+    <li><b>2.</b> Cylinder stays stock 25T — verify bore/stroke + pin-mount condition; bench-test at relief 5 min, zero weep</li>
+    <li><b>3.</b> Mold bracket bolted to beam end — beam rated for exactly stock force</li>
+    <li><b>4.</b> Weld mold box + stiffeners; shoe + hinged fill gate</li>
+    <li><b>5.</b> Platen: plate, stub, collar; door: hinge barrels, pin ears — drops flat = shelf</li>
+  </ul></div><div><ul>
+    <li><b>6.</b> Plumb: splitter valve → gauge → stock cyl; relief ≤3,000 psi at deadhead</li>
+    <li><b>7.</b> Commission: dry cycles, wood-block test, first soil pucks, check beam for flex, re-torque</li>
+        <li><b>CAD:</b> cad/params.scad — FIELD-measure beam before cutting</li>
+  </ul></div></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <h2>Hydraulics — One Line</h2>
+  <svg class="diagram" viewBox="0 0 900 320">
+    <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e8b96d"/></marker></defs>
+    <g font-family="sans-serif" font-size="15" fill="#e8e0d4" text-anchor="middle">
+      <rect x="20" y="120" width="150" height="80" rx="8" fill="#2a241d" stroke="#4a4136"/><text x="95" y="155">Kohler engine</text><text x="95" y="178" fill="#a89b87">~6–8 hp</text>
+      <rect x="210" y="120" width="150" height="80" rx="8" fill="#2a241d" stroke="#4a4136"/><text x="285" y="150">2-stage pump</text><text x="285" y="172" fill="#a89b87">fast / strong</text>
+      <rect x="400" y="120" width="150" height="80" rx="8" fill="#2a241d" stroke="#4a4136"/><text x="475" y="150">splitter valve</text><text x="475" y="172" fill="#a89b87">relief ≤3,000 psi</text>
+      <rect x="590" y="120" width="150" height="80" rx="8" fill="#2a241d" stroke="#4a4136"/><text x="665" y="150">gauge</text><text x="665" y="172" fill="#a89b87">0–5,000 psi</text>
+      <rect x="730" y="100" width="150" height="120" rx="8" fill="#3a2a1d" stroke="#e8b96d"/><text x="805" y="150" fill="#e8b96d">stock cyl</text><text x="805" y="172" fill="#a89b87">~5″ = 25T</text>
+      <rect x="210" y="250" width="150" height="50" rx="8" fill="#241f18" stroke="#4a4136"/><text x="285" y="280" fill="#a89b87">tank / filter</text>
+      <line x1="170" y1="160" x2="208" y2="160" stroke="#e8b96d" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="360" y1="160" x2="398" y2="160" stroke="#e8b96d" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="550" y1="160" x2="588" y2="160" stroke="#e8b96d" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="740" y1="160" x2="728" y2="160" stroke="#e8b96d" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="285" y1="200" x2="285" y2="248" stroke="#6b6154" stroke-width="2" stroke-dasharray="5 4"/>
+      <text x="400" y="40" fill="#a89b87" font-size="16">Force = system psi × bore area → stock ~5″ cyl = ~25T → products sized to it</text>
+    </g>
+  </svg>
+  <ul style="margin-top:1em">
+    <li>Two-stage pump = fast approach + slow squeeze, free</li>
+    <li>Face pressure @stock 25T: <span class="num">625</span> @8×10 · <span class="num">694</span> @6×12 · <span class="num">500</span> @paver — all in the 500–1,500 band</li>
+    <li>Altitude ~7,500 ft → ~20% derate → slower cycle, sized OK</li>
+  </ul>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <h2>Soil Gates — Test Before You Commit</h2>
+  <div class="cols"><div><ul>
+    <li><b>1. Test hole</b> ~3–4 ft, watch 24–48h — seep = shallow sink or pad <small>(SLV water table)</small></li>
+    <li><b>2. Jar test</b> — 15–30% clay target; SLV sandy → +5–10% native soil only — crush gate decides</li>
+    <li><b>3. Soak/efflorescence test</b> — salt-weak soil fails the 24-hr soak directly <small>(Salton)</small></li>
+    <li><b>4. Selenium</b> — Salton ag-drain history → cheap lab screen</li>
+  </ul></div><div><ul>
+    <li><b>5. Native moisture 4–6%</b> — weigh→dry→reweigh; dig-fresh spoil carries it</li>
+    <li><b>6. Bearing walk</b> — tamp, walk it; pumping/prints = rethink siting</li>
+    <li><b>7. Pressed validation</b> — waist-high drop survives; 24h soak; SLV freeze-thaw cycle</li>
+    <li class="warn">Bone-dry &lt;3% → mist liters/ton only (still ~zero-water)</li>
+  </ul></div></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <h2>Production Line — Press at the Pit Edge</h2>
+  <div class="flow" style="font-size:1.15em">
+    <span>Dig pit</span><i>→</i><span>Sieve</span><i>→</i><span>Tarp-mix (±native soil only — crush gate decides</span><i>→</i>
+    <span>Dose scoop</span><i>→</i><span>Press + dwell</span><i>→</i><span>Door drops</span><i>→</i>
+    <span>Slide to stack</span><i>→</i><span>Carry to wall</span>
+  </div>
+  <div class="cols"><div><ul>
+    <li><b>~30–60 s/cycle → 1–2 bricks/min</b></li>
+    <li>~2,100 units/dome ≈ 10–21 press-hours</li>
+    <li>Excavation = soil source — spoil never leaves the site</li>
+    <li>Fines → mix · coarse sand → drainage · rest → berm</li>
+  </ul></div><div><ul>
+    <li>~18 lb units — one-person stacking, ground-row curing at wall height</li>
+    <li>QC loop: gauge every cycle · thickness/flatness every 20th · drop test every 50th · key-fit every batch</li>
+    <li>The press IS the crush rig — gauge at failure = MPa</li>
+  </ul></div></div>
+</section>
+
+
+<!-- 9b BRICK CYCLE -->
+<section class="slide">
+  <h2>The Brick Cycle — Soil In, Brick Out</h2>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+  <figure style="text-align:center;margin:0"><svg width="180" height="230" viewBox="0 0 180 230">
+    <rect x="40" y="80" width="12" height="90" fill="#666"/><rect x="128" y="80" width="12" height="90" fill="#666"/>
+    <rect x="40" y="158" width="100" height="12" fill="#888"/>
+    <polygon points="52,80 128,80 110,55 70,55" fill="#8a6a42"/>
+    <rect x="83" y="20" width="14" height="30" fill="#999"/>
+    <line x1="90" y1="35" x2="90" y2="75" stroke="#c33" stroke-width="4" marker-end="url(#arr)"/>
+    <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c33"/></marker></defs>
+    <text x="90" y="195" font-size="12" text-anchor="middle" fill="#aaa">measured dose → open bore</text>
+  </svg><figcaption><b>1 DOSE</b> — soil into the bore</figcaption></figure>
+  <figure style="text-align:center;margin:0"><svg width="180" height="230" viewBox="0 0 180 230">
+    <rect x="40" y="80" width="12" height="90" fill="#666"/><rect x="128" y="80" width="12" height="90" fill="#666"/>
+    <rect x="40" y="158" width="100" height="12" fill="#888"/>
+    <rect x="52" y="100" width="76" height="58" fill="#b56a3a"/>
+    <rect x="52" y="60" width="76" height="14" fill="#bbb"/><rect x="83" y="10" width="14" height="50" fill="#999"/>
+    <line x1="90" y1="40" x2="90" y2="95" stroke="#c33" stroke-width="4" marker-end="url(#arr2)"/>
+    <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c33"/></marker></defs>
+    <text x="90" y="195" font-size="12" text-anchor="middle" fill="#aaa">600 psi → dead-stop collar</text>
+  </svg><figcaption><b>2 PRESS</b> — platen to dead-stop</figcaption></figure>
+  <figure style="text-align:center;margin:0"><svg width="180" height="230" viewBox="0 0 180 230">
+    <rect x="40" y="80" width="12" height="90" fill="#666"/><rect x="128" y="80" width="12" height="90" fill="#666"/>
+    <rect x="40" y="158" width="100" height="12" fill="#888"/>
+    <rect x="52" y="100" width="76" height="58" fill="#b56a3a"/>
+    <rect x="83" y="20" width="14" height="30" fill="#999"/>
+    <line x1="90" y1="70" x2="90" y2="30" stroke="#3a3" stroke-width="4" marker-end="url(#arr3)"/>
+    <defs><marker id="arr3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#3a3"/></marker></defs>
+    <text x="90" y="195" font-size="12" text-anchor="middle" fill="#aaa">brick formed in bore</text>
+  </svg><figcaption><b>3 RETRACT</b> — platen up</figcaption></figure>
+  <figure style="text-align:center;margin:0"><svg width="180" height="230" viewBox="0 0 180 230">
+    <rect x="40" y="80" width="12" height="90" fill="#666"/><rect x="128" y="80" width="12" height="90" fill="#666"/>
+    <rect x="52" y="100" width="76" height="58" fill="#b56a3a"/>
+    <rect x="90" y="158" width="70" height="12" fill="#888"/>
+    <line x1="120" y1="164" x2="150" y2="164" stroke="#3a3" stroke-width="4" marker-end="url(#arr4)"/>
+    <defs><marker id="arr4" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#3a3"/></marker></defs>
+    <rect x="83" y="20" width="14" height="30" fill="#999"/>
+    <text x="90" y="195" font-size="12" text-anchor="middle" fill="#aaa">shoe slides out → brick held by bore walls</text>
+  </svg><figcaption><b>4 SHOE OUT</b> — bottom opens</figcaption></figure>
+  <figure style="text-align:center;margin:0"><svg width="180" height="230" viewBox="0 0 180 230">
+    <rect x="40" y="60" width="12" height="90" fill="#666"/><rect x="128" y="60" width="12" height="90" fill="#666"/>
+    <rect x="52" y="60" width="76" height="14" fill="#bbb"/><rect x="83" y="10" width="14" height="50" fill="#999"/>
+    <rect x="52" y="160" width="76" height="44" fill="#b56a3a"/>
+    <rect x="40" y="204" width="140" height="12" fill="#999"/>
+    <line x1="90" y1="90" x2="90" y2="150" stroke="#c33" stroke-width="4" marker-end="url(#arr5)"/>
+    <defs><marker id="arr5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c33"/></marker></defs>
+    <text x="90" y="222" font-size="11" text-anchor="middle" fill="#aaa">brick through to bed → out over door</text>
+  </svg><figcaption><b>5 EJECT</b> — platen pushes through</figcaption></figure>
+  <figure style="text-align:center;margin:0"><svg width="180" height="230" viewBox="0 0 180 230">
+    <rect x="40" y="60" width="12" height="90" fill="#666"/><rect x="128" y="60" width="12" height="90" fill="#666"/>
+    <rect x="83" y="15" width="14" height="30" fill="#999"/>
+    <rect x="70" y="160" width="76" height="44" fill="#b56a3a"/>
+    <rect x="40" y="204" width="140" height="12" fill="#999"/>
+    <line x1="120" y1="182" x2="160" y2="182" stroke="#3a3" stroke-width="4" marker-end="url(#arr6)"/>
+    <defs><marker id="arr6" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#3a3"/></marker></defs>
+    <text x="90" y="222" font-size="11" text-anchor="middle" fill="#aaa">pull brick → stack</text>
+  </svg><figcaption><b>6 TAKE-OFF</b> — shelf → stack</figcaption></figure>
+  </div>
+  <p class="sub" style="text-align:center">Cycle ~20–40 s/brick powered · bottom shoe IS the mold floor — slide it out, platen pushes the brick through to the bed; front door drops open = take-off shelf at bed level, pull brick over it → stack</p>
+</section>
+
+
+<!-- 9c AUTOMATION -->
+<section class="slide">
+  <h2>Automation — $300 Spec, ~$60 Scrounged</h2>
+  <div class="cols"><div>
+  <table>
+    <tr><th>Item</th><th class="n">New</th><th class="n">Scrounged</th></tr>
+    <tr><td>Valve actuator (junkyard linear actuator on stock lever)</td><td class="n">90–140</td><td class="n price">5–35</td></tr>
+    <tr><td>Dose-gate + shoe actuators</td><td class="n">70</td><td class="n price">0–30</td></tr>
+    <tr><td>Limit switches ×4 (microwave door switches)</td><td class="n">20</td><td class="n price">0–5</td></tr>
+    <tr><td>Pressure transducer 0–5000 psi</td><td class="n">40</td><td class="n price">15–25</td></tr>
+    <tr><td>Arduino Nano + SD + RTC + relays</td><td class="n">55</td><td class="n price">8–15</td></tr>
+    <tr><td>E-stop + buttons + box + wire</td><td class="n">60</td><td class="n price">15–25</td></tr>
+    <tr><th>Total</th><th class="n">~300–380</th><th class="n price">~40–90</th></tr>
+  </table>
+  </div><div>
+  <ul>
+    <li><b>ONE donor does ~80%:</b> actuators + relay board + pendant + wire → <a href="https://www.craigslist.org/view/d/colorado-springs-free-power-recliner/odhwTq2VmbQ6rpb4k4ZHDe" target="_blank">FREE power recliner (live)</a> · <a href="https://www.craigslist.org/view/d/colorado-springs-reclining-bed-with/a1SVdXoUdF1QKRf1viftsn" target="_blank">$50 reclining bed backup</a> · limit switches: <a href="https://www.craigslist.org/view/d/colorado-springs-free-appliances-oven/jqz7FzEjsGVWDs3f8cQu8V" target="_blank">FREE microwave (live)</a></li>
+    <li><b>Controller written:</b> <code>automation/ceb_controller/ceb_controller.ino</code> — DOSE→PRESS→RETRACT→SHOE→EJECT→LOG, timeout-guarded, fail-safe center</li>
+    <li><b>Auto-QC:</b> every brick logs peak psi + dwell to SD — the certification file writes itself (the thing commercial vendors can't give you)</li>
+    <li><b>Manual override:</b> stock valve stays plumbed — unplug one connector → 100% manual again</li>
+    <li><b>Safety:</b> E-stop hardwired (never software) · mechanical relief ≤3,000 psi · both-hands-clear start</li>
+  </ul>
+  </div></div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <h2>The Dome — Exterior + Stomion Entry</h2>
+  <div style="display:flex;gap:14px;align-items:flex-start">
+    <figure style="flex:1.5;margin:0"><img class="full" src="cad/png/dome_full.png" alt="Dome exterior — view-dormer window through the mound"><figcaption style="font-size:.8em;text-align:center;opacity:.8">Mound + <b>view-dormer</b>: framed 48×30″ reveal through ~14″ of flank soil — true outside view · oculus cap ring at apex</figcaption></figure>
+    <figure style="flex:1;margin:0"><img class="full" src="cad/png/dome_entry.png" alt="Stomion entry"><figcaption style="font-size:.8em;text-align:center;opacity:.8">Rimmed open run + sump + threshold sill → covered vault → doorway never sky-exposed</figcaption></figure>
+  </div>
+  <p class="sub" style="text-align:center">~22 TRUE-helix spiral courses of 8×10 flat-face · uniform brick-cap apex · mound burial · 12″ apex cap (pit-spoil self-funding) · covered tholos-stomion entry</p>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <h2>The Dome — Section</h2>
+  <img class="full" src="cad/png/dome_section.png" alt="Dome section">
+  <p class="sub" style="text-align:center">Pit floor 36″ below grade → springs from raised collar → <b>12″ wall + 24″ base band (below grade)</b> → corbel to brick cap → <b>oculus + two 48″ view-dormers</b> (~2 ft shafts — deep reveals, true view) → <b>tholos stomion:</b> stairs under a corbelled vault</p>
+</section>
+
+<!-- 11b — UNBURIED VENUE MODULE (mars-to-venue.md / venue.scad) -->
+<section class="slide">
+  <h2>The Venue Module — Unburied, No Mound</h2>
+  <div style="display:flex;gap:14px;align-items:stretch;height:62vh">
+    <iframe src="cad/viewer/venue_viewer.html" style="flex:1;border:1px solid #3a332b;border-radius:8px;pointer-events:auto"></iframe>
+  </div>
+  <p class="sub" style="text-align:center">Interactive — drag to orbit, wheel to zoom, buttons for Exterior/Section/Wireframe/Top. <b>THE GATEHOUSE</b> — earth-sheltered TWO-CELL vaulted gatehouse centered on the square — 14×8-ft hall + 14×5-ft livable back cell behind a shared party wall (door through it; rear vault leans FORWARD onto it — opposing thrust cancels, the multi-bay trick the Dunes basilica repeats; thin liner rear wall — the bank closes the arc): Nubian leaning vault (no formwork) under a soil cap + spring-height berms (27°, placed BEFORE the vault — they carry the thrust) + plinth keys + one continuous counterforts + haunch banks → <b>~5 g composite-kern bound</b> (<code>cad/venue_battle.py</code> — computed 10–12 g, contingent on compacted lifts + keys) + <b>fully open 14-ft arched mouth</b> under a stepped arch-ring face — the facade's silhouette follows the vault's own arc (retains the cap, no square wall, no vertical soil face) — the echea bass vents moved INTO the rib walls (~56 Hz, woofer discs flanking the entrance = the walls ARE the PA), centered on the square — dancers on bare earth, no pad. ~3,050 units + ~55 yd3 scrape-earth ≈ <b>~9–11 d all-in, NO machine</b> (counterforts replace the deep bank; jumbo bricks on the same press) w/ pre-pressed bricks + excavator. Dome deferred to Trip 2 (2.67 g dry / 2.18 g wet when built)</p>
+</section>
+
+<!-- 11c -->
+<section class="slide">
+  <h2>The Gatehouse — What's Inside</h2>
+  <div class="cols"><div><ul>
+    <li><b>Nubian leaning vault 14×8 ft</b> — vertical front arch + 11 courses at ~15°, each leaning on the last → full 14-ft span, zero formwork; ~200 sq ft covered floor, two cells (hall + livable back cell — the party wall's door links them)</li>
+    <li><b>Ribs + party wall + rear cell</b> — deep-battered wythe+soil-core walls; the party wall's gable is the shared abutment BOTH vaults lean into (rear cell's courses lean FORWARD — opposing thrust cancels); rear gable wall + vent stack = a livable second room</li>
+    <li><b>Earth-shelter — load-bearing</b> — berms (~27°) cresting over springing + ~20″ crown cap + <b>mouth wings</b> (the open face gets a kern) + <b>plinth keys</b> below grade (kills sliding → kern rocking); berms go in BEFORE the vault — they carry the thrust</li>
+  </ul></div><div><ul>
+    <li><b>Fully open mouth + arched front ring</b> — the 14-ft arch free-spans rib-to-rib, nothing in the doorway; the spandrel steps along the vault's own arc (one arched face, no square wall) and still retains the cap</li>
+    <li><b>Echea bass vents ×2 — in the RIBS</b> — ~44 L Helmholtz cavities embedded in each rib's soil-core zone, necks + dark woofer discs on the front faces ≈ 56 Hz → the walls ARE the subwoofers (passive ports)</li>
+    <li><b>Dust-storm package</b> — mouth threshold (saltation lip) + masonry vent stack through the cap + paver armor on the crest + echea shutters: seal the hall, live in the back cell</li>
+    <li><b>No pad</b> — gatehouse centered on the square; dancers on bare site earth; vent shutters = the acoustic "mute"</li>
+    <li><b>Honest rating:</b> ~5 g composite-kern bound — battle-tested (<code>venue_battle.py</code>: computed 10–12 g, contingent on compacted lifts + plinth keys + wings; incoherent-soil floor ~1.6 g; Salton liquefaction flagged) / unburied ribs FAIL static thrust — shelter is structural; dome = Trip 2 at 2.67 g dry / 2.18 g wet; 32-ft dance dome = crew build</li>
+  </ul></div></div>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <h2>Build Sequence — ~5 Days On Site</h2>
+  <div class="cols"><div><ul>
+    <li><b>Day 1:</b> test hole ✓ → excavate ~36″ pit · swale + levee same day</li>
+    <li><b>Day 2–3:</b> press ~2,100 keyed units at pit edge</li>
+    <li><b>Day 3–5:</b> compass arm → spiral courses · clay-dust bedding · place-don't-drop · level each course</li>
+    <li><b>Day 5–6:</b> brick-cap apex + view-dormer shafts · doorway returns · stair treads + stomion vault</li>
+    <li><b>Day 6:</b> paver floor · apron skirt · <b>mound berm — spoil self-funds it</b> · drain daylighted</li>
+  </ul></div><div><ul>
+    <li><b>TRUE helix spiral (igloo):</b> each brick ~H/n higher than the last — bears on course below + previous block, self-supporting at placement</li>
+    <li><b>Corbel 1–3″/course</b> · hemispherical · <b>12″ wall + 24″ base band (courses 0–7, below grade)</b> · +20 kN cap · batter</li>
+    <li><b>Flat beds + keyed insert ALL courses</b> — single SKU, no course-tracking</li>
+    <li><b>Fallback:</b> sand mound only if free corbelling proves too fussy</li>
+  </ul></div></div>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <h2>Water Defense — 7 Layers, All On-Site</h2>
+  <div class="cols"><div><ul>
+    <li><b>1 Siting</b> — highest ground, never in a "dry" wash</li>
+    <li><b>2 Diversion swale</b> — contour ditch around both sides; spoil = levee; doubles as permaculture water harvest</li>
+    <li><b>3 Rim collar 12–18″</b> — floor below grade, springline above — sheet flow can't climb in</li>
+    <li><b>4 Flared apron</b> — kills splash/ponding</li>
+  </ul></div><div><ul>
+    <li><b>5 Air-gap lining</b> — 1–2″ void behind wall (better than rubble, zero material) + drain channel to daylight</li>
+    <li><b>6 Covered entry — stomion vault</b> — corbelled vault roofs the inner stair run through the berm: doorway never sky-exposed; open outer run → drain sump; raised sill lip at door</li>
+    <li><b>7 Infiltration floor</b> — loose pavers + coarse sand</li>
+    <li class="warn">Residual: catastrophic flood → ~free soil + 3 days = rebuildable by design</li>
+  </ul></div></div>
+</section>
+
+<!-- 14 -->
+<section class="slide">
+  <h2>Disaster Scorecard — Full Ancestral Toolkit</h2>
+  <table>
+    <tr><th>Threat</th><th>Defense</th></tr>
+    <tr><td>Seismic — <b>VERIFIED PASS 5.0g</b></td><td>12″ wall + 24″ base band · keys ALL courses · helix spiral · <b>mound w/ 12″ cap</b> · pit-buttress + soil-shear credits. ~1.7× the strongest recorded motion ever (~3g). <span class="warn">Site ceiling = liquefaction susceptibility, not structure</span></td></tr>
+    <tr><td>Fire</td><td class="ok">Best-in-class — earth doesn't burn</td></tr>
+    <tr><td>Flood</td><td>7-layer system; inundation remains fatal — siting IS the answer</td></tr>
+    <tr><td>Wind / heat</td><td class="ok">Optimal shape · ground-coupled ~55–60°F</td></tr>
+    <tr><td>Freeze-thaw (SLV)</td><td>Below-frost base · dense low-absorption brick · berm · durability gate</td></tr>
+    <tr><td>Snow / lightning</td><td class="ok">Symmetric sheds · earth = ground</td></tr>
+  </table>
+  <p class="sub" style="margin-top:1em">Igloo · clochán · trullo · tholos — every proven dry-stack technique, zero tensile elements, ~100% site soil, uniform units throughout</p>
+</section>
+
+<!-- 15 -->
+<section class="slide">
+  <h2>Cost · Schedule · Next Actions</h2>
+  <div class="cols"><div>
+  <table>
+    <tr><th>Phase</th><th class="n">$</th></tr>
+    <tr><td>0 — soil gates (jars + soak tests)</td><td class="n price">~20</td></tr>
+    <tr><td>1 — working plant</td><td class="n price">~460–635</td></tr>
+    <tr><td>2 — first dome standing</td><td class="n price">+68–108</td></tr>
+    <tr><td>3 — throughput parity pkg</td><td class="n price">+450–900</td></tr>
+    <tr><td>4 — movers (per region, optional)</td><td class="n price">2.5–15k</td></tr>
+    <tr><td>5 — automation (donor scrounge + Nano)</td><td class="n price">+40–90</td></tr>
+  </table>
+  </div><div><ul>
+    <li><b>W1:</b> messages + buy run + soil tests + test hole</li>
+    <li><b>W2:</b> weld mold + mount on beam + plumb</li>
+    <li><b>W3–4:</b> tune, durability gates, ~2,100 units</li>
+    <li><b>~5–6 days:</b> excavate → press → stack → mound → dome · <b>strikes in ~4–6 h:</b> remote-pole collapse into the pit (15-ft exclusion, nobody on the shell), mound backfills on top — returns to land clean · or ~1 day careful unstack to reuse bricks</li>
+    <li><b>Machine = splitter only:</b> ~$650–750 core, reversible, still splits logs — slide 3</li>
+    <li><b>Next:</b> send seller messages · measure door · dig test hole</li>
+  </ul></div></div>
+  <p class="sub" style="margin-top:1.5em">Docs: ~/Documents/ceb-press/ · CAD: cad/ (OpenSCAD parametric + STL) · Calc: brick_calc.py</p>
+</section>
+
+<div id="hint">← → navigate · click to advance</div>
+<div id="hud"></div>
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  let i = 0;
+  const hud = document.getElementById('hud');
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, j) => s.classList.toggle('on', j === i));
+    hud.textContent = (i + 1) + ' / ' + slides.length;
+    location.hash = i;
+  }
+  addEventListener('keydown', e => {
+    if (['ArrowRight', ' ', 'PageDown'].includes(e.key)) show(i + 1);
+    if (['ArrowLeft', 'PageUp'].includes(e.key)) show(i - 1);
+    if (e.key === 'Home') show(0); if (e.key === 'End') show(slides.length - 1);
+  });
+  addEventListener('click', () => show(i + 1));
+  show(parseInt(location.hash.slice(1)) || 0);
+</script>
+</body>
+</html>

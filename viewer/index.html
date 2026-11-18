@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Venue module — interactive</title>
+<style>
+  body { margin:0; background:#1b1712; font-family:system-ui,sans-serif; overflow:hidden; }
+  #ui { position:fixed; top:10px; left:10px; z-index:10; color:#ddd;
+        background:rgba(0,0,0,.45); padding:8px 10px; border-radius:8px; font-size:13px; }
+  #ui button { background:#3a332b; color:#eee; border:1px solid #555; border-radius:5px;
+        padding:4px 9px; margin-right:5px; cursor:pointer; font-size:12px; }
+  #ui button:hover { background:#4a433a; }
+  #hint { position:fixed; bottom:10px; left:10px; color:#999; font-size:12px; z-index:10; }
+  canvas { display:block; }
+</style>
+</head>
+<body>
+<div id="ui">
+  <b>Venue module</b><br>
+  <button id="full">Exterior</button><button id="sect">Section</button>
+  <button id="wire">Wireframe</button><button id="top">Top</button><button id="interior">Interior</button><button id="reset">Reset</button>
+</div>
+<div id="hint">drag = orbit · wheel = zoom · right-drag = pan</div>
+<script src="three.min.js"></script>
+<script src="STLLoader.js"></script>
+<script src="OrbitControls.js"></script>
+<script>
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x1b1712);
+  scene.fog = new THREE.Fog(0x1b1712, 900, 2600);
+  const cam = new THREE.PerspectiveCamera(45, innerWidth/innerHeight, 1, 5000);
+  const renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer.setSize(innerWidth, innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  scene.add(new THREE.HemisphereLight(0xfff5e0, 0x3a3025, 0.85));
+  const sun = new THREE.DirectionalLight(0xfff0d5, 0.9);
+  sun.position.set(300, -400, 600);
+  scene.add(sun);
+  const fill = new THREE.DirectionalLight(0xc9d8e8, 0.3);
+  fill.position.set(-300, 300, 200);
+  scene.add(fill);
+
+  const controls = new THREE.OrbitControls(cam, renderer.domElement);
+
+  const mat = new THREE.MeshStandardMaterial({color:0xc98a5a, roughness:0.85, metalness:0});
+  const matWire = new THREE.MeshBasicMaterial({color:0xd8a06a, wireframe:true});
+  let mesh = null, useWire = false;
+
+  const loader = new THREE.STLLoader();
+  function load(file) {
+    loader.load(file, geo => {
+      geo.computeBoundingBox();
+      if (mesh) scene.remove(mesh);
+      mesh = new THREE.Mesh(geo, useWire ? matWire : mat);
+      mesh.rotation.x = -Math.PI/2;         // STL Z-up -> viewer Y-up
+      scene.add(mesh);
+      frame();
+    });
+  }
+  function frame() {
+    if (!mesh) return;
+    const bb = mesh.geometry.boundingBox;
+    const c = bb.getCenter(new THREE.Vector3());
+    const r = bb.getSize(new THREE.Vector3()).length() * 0.62;
+    controls.target.copy(c);
+    cam.position.set(c.x, c.y - r*1.05, c.z + r*0.55);
+    controls.update();
+  }
+  document.getElementById('full').onclick = () => load('venue.stl');
+  document.getElementById('sect').onclick = () => load('venue_section.stl');
+  document.getElementById('wire').onclick = () => {
+    useWire = !useWire;
+    if (mesh) mesh.material = useWire ? matWire : mat;
+  };
+  document.getElementById('top').onclick = () => {
+    if (!mesh) return;
+    const bb = mesh.geometry.boundingBox, c = bb.getCenter(new THREE.Vector3());
+    cam.position.set(c.x, c.y, bb.max.z + 400);
+    controls.target.copy(c); controls.update();
+  };
+  document.getElementById('interior').onclick = () => {
+    // stand inside the dome (model coords x,y,z -> viewer x,z,-y):
+    // eye ~z=34", looking toward the door/azimuth (+z viewer = -Y model)
+    cam.position.set(6, 34, -16);
+    controls.target.set(0, 30, 60);
+    controls.update();
+  };
+  document.getElementById('reset').onclick = frame;
+
+  load('venue.stl');
+  addEventListener('resize', () => {
+    cam.aspect = innerWidth/innerHeight; cam.updateProjectionMatrix();
+    renderer.setSize(innerWidth, innerHeight);
+  });
+  (function anim(){ requestAnimationFrame(anim); renderer.render(scene, cam); })();
+</script>
+</body>
+</html>
