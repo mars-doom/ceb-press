@@ -20,6 +20,8 @@ flowchart LR
 
 ## The mold — the one built part
 
+![Exploded view of the mold weldment: box, platen, eject door, brick](images/mold-exploded.png)
+
 - **Bore**: 3/8–1/2″ plate, ~⅛″ oversize on the largest product; bolt-in liner sets
   change product size — one master bore, swap liners
 - **Platen**: ~1″ plate, 1/16″ under bore, stub shaft to the cylinder nose

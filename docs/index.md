@@ -4,7 +4,7 @@ title: Summary
 
 # Splitter CEB Press
 
-![What we're building with it — a vaulted earth gatehouse](images/hero.jpg)
+![The press: stock splitter beam + cylinder + power pack, mold box bolted on the end](images/hero.jpg)
 
 **Status:** Design complete — pre-build
 
